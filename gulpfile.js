@@ -28,10 +28,10 @@ function css () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    // .pipe(csso())
-    // .pipe(rename('style.min.css'))
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
     .pipe(sourcemaps.write("."))
-    .pipe(dest('source/css/'))
+    .pipe(dest('build/css/'))
     .pipe(server.stream());
 }
 
@@ -46,8 +46,6 @@ function browsersynnc () {
   });
 
   watch('source/scss/**/*.{scss,sass}', series('css'));
-  // watch('source/img/icon-*.svg', series('sprite', 'html', 'refresh'));
-  // watch('source/*.html', series('html', 'refresh'));
   watch('source/*.html', series(refresh));
 }
 
@@ -93,6 +91,7 @@ function copy () {
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
     'source/js/**',
+    "source/**/*.html",
     'source//*.ico'
     ], {
       base: 'source'
@@ -104,6 +103,12 @@ function delfile () {
   return del('build');
 }
 
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+
+exports.deploy = deploy;
+
 exports.browsersynnc = browsersynnc;
 exports.css = css;
 exports.images = images;
@@ -112,4 +117,5 @@ exports.sprite = svgSprite;
 exports.html = html;
 exports.copy = copy;
 exports.delfile = delfile;
+exports.build = series(delfile, copy, css);
 exports.start = series(css, browsersynnc);
