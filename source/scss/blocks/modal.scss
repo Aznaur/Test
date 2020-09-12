@@ -1,6 +1,16 @@
 .modal {
-  max-width: 890px;
   margin: 0 auto;
-  display: flex;justify-content: center;
+  display: flex;
+  justify-content: center;
   padding-top: 50px;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+
+.modal__open {
+  display: flex;
 }

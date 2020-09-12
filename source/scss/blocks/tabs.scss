@@ -3,10 +3,6 @@
   background: #FFFFFF;
   border-radius: 4px;
   padding-top: 35px;
-  padding-bottom: 50px;
-  padding-left: 76px;
-  padding-right: 76px;
-  box-sizing: border-box;
   transition: width 0.15s ease-in-out;
 
   &::before {
@@ -39,6 +35,30 @@
   display: block;
 }
 
+.tabs__form-login {
+  & input {
+    width: 338px;
+    padding-left: 16px;
+  }
+
+  & .form__group {
+    margin-bottom: 14px;
+
+    &:last-of-type {
+      & a {
+        color: #3464E0;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      margin-bottom: 0;
+      margin-top: 42px;
+    }
+  }
+}
+
 #login:checked ~ .tabs__control label:first-of-type,
 #register:checked ~ .tabs__control label:last-of-type {
   color: #3464E0;
@@ -47,13 +67,28 @@
 
 .tabs__item {
   display: none;
+
+  &:first-of-type {
+    padding-bottom: 50px;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+
+  &:last-of-type {
+    padding-bottom: 34px;
+    padding-left: 33px;
+    padding-right: 16px;
+  }
 }
 
 .tabs__control {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 
   & label {
+    word-break: break-word;
     font-size: 26px;
     line-height: 26px;
     color: #C3CAD6;
@@ -70,4 +105,32 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+
+@media (max-width: $mobile-width) {
+  .tabs {
+    & .tabs__item {
+
+      width: 310px;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      & input {
+        width: 100%;
+      }
+    }
+  }
+
+  .tabs__control {
+    & label {
+      font-size: 22px;
+
+      &:first-of-type {
+        margin-right: 5px;
+      }
+
+    }
+  }
 }

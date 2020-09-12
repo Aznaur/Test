@@ -58,7 +58,7 @@
             </div>
             <ul class="tabs__list">
               <li class="tabs__item">
-                <form class="tabs__form form" action="/login" method="POST" autocomplete="off">
+                <form class="tabs__form-login form" action="/login" method="POST" autocomplete="off">
                   <div class="form__group">
                     <label for="login-email">Ваш email *</label>
                     <input type="email" name="email" id="login-email" placeholder="Укажите адрес электронной почты" aria-label="Поле для ввода email" required>
@@ -67,7 +67,7 @@
                     <label for="login-password">Введите пароль *</label>
                     <input type="password" name="password" id="login-password" placeholder="*****" aria-label="Поле для ввода пароля" required>
                   </div>
-                  <div class="form__group">
+                  <div class="form__group form__group-bt">
                     <button type="submit">Добавить запись</button>
                     <a href="#">Забыли пароль?</a>
                   </div>
@@ -75,7 +75,7 @@
 
               </li>
               <li class="tabs__item">
-                <form class="tabs__form form" action="/signup" method="POST" autocomplete="off">
+                <form class="tabs__form-signup form" action="/signup" method="POST" autocomplete="off">
                   <div class="form__wrapper">
                     <div class="form__group">
                       <label for="registration-name">ФИО *</label>
@@ -99,12 +99,16 @@
                     </div>
                   </div>
                   <div class="form__group">
-                    <input type="checkbox" name="personal-data" id="registration-personal-data">
-                    <label for="registration-personal-data">Согласен на обработку моих персональных данных *</label>
-                    <input type="checkbox" name="notification" id="registration-notification">
-                    <label for="registration-notification">Согласен на получение уведомлений и рассылок *</label>
+                    <div class="form__group-item">
+                      <input class="visually-hidden" type="checkbox" name="personal-data" id="registration-personal-data" checked>
+                      <label for="registration-personal-data">Согласен на обработку моих персональных данных *</label>
+                    </div>
+                    <div class="form__group-item">
+                      <input class="visually-hidden" type="checkbox" name="notification" id="registration-notification" checked>
+                      <label for="registration-notification">Согласен на получение уведомлений и рассылок *</label>
+                    </div>
                   </div>
-                  <div class="form__group">
+                  <div class="form__group form__group-bt">
                     <button type="submit">Зарегистрироваться</button>
                     <button type="button">Отказаться</button>
                   </div>
