@@ -1,6 +1,6 @@
 .tabs {
   position: relative;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 4px;
   padding-top: 35px;
   transition: width 0.15s ease-in-out;
@@ -46,7 +46,7 @@
 
     &:last-of-type {
       & a {
-        color: #3464E0;
+        color: #3464e0;
         text-decoration: none;
 
         &:hover {
@@ -61,7 +61,7 @@
 
 #login:checked ~ .tabs__control label:first-of-type,
 #register:checked ~ .tabs__control label:last-of-type {
-  color: #3464E0;
+  color: #3464e0;
 }
 
 
@@ -91,7 +91,7 @@
     word-break: break-word;
     font-size: 26px;
     line-height: 26px;
-    color: #C3CAD6;
+    color: #c3cad6;
     cursor: pointer;
     transition: color 0.15s ease-in-out;
 
@@ -130,7 +130,6 @@
       &:first-of-type {
         margin-right: 5px;
       }
-
     }
   }
 }

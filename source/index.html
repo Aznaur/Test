@@ -60,11 +60,11 @@
               <li class="tabs__item">
                 <form class="tabs__form-login form" action="/login" method="POST" autocomplete="off">
                   <div class="form__group">
-                    <label for="login-email">Ваш email *</label>
+                    <label for="login-email">Ваш email <span>*</span></label>
                     <input type="email" name="email" id="login-email" placeholder="Укажите адрес электронной почты" aria-label="Поле для ввода email" required>
                   </div>
                   <div class="form__group">
-                    <label for="login-password">Введите пароль *</label>
+                    <label for="login-password">Введите пароль <span>*</span></label>
                     <input type="password" name="password" id="login-password" placeholder="*****" aria-label="Поле для ввода пароля" required>
                   </div>
                   <div class="form__group form__group-bt">
@@ -78,34 +78,34 @@
                 <form class="tabs__form-signup form" action="/signup" method="POST" autocomplete="off">
                   <div class="form__wrapper">
                     <div class="form__group">
-                      <label for="registration-name">ФИО *</label>
+                      <label for="registration-name">ФИО <span>*</span></label>
                       <input type="text" name="name" placeholder="Фамилия Имя Отчество" id="registration-name" aria-label="Поле для ввода фамилии имени и отчества" required>
                     </div>
                     <div class="form__group">
-                      <label for="registration-email">Email *</label>
+                      <label for="registration-email">Email <span>*</span></label>
                       <input type="email" name="email" placeholder="Адрес будет логином на портале" id="registration-email" aria-label="Поле для ввода email" required>
                     </div>
                     <div class="form__group">
-                      <label for="registration-phone">Телефон *</label>
+                      <label for="registration-phone">Телефон <span>*</span></label>
                       <input type="text" name="phone" placeholder="+7(___)___-__-__" id="registration-phone" aria-label="Поле для ввода номера телефона" required>
                     </div>
                     <div class="form__group">
-                      <label for="registration-snils">СНИЛС *</label>
-                      <input type="text" name="snils" placeholder="___-___-__" id="registration-snils" aria-label="Поле для ввода снилс" required>
+                      <label for="registration-snils">СНИЛС <span>*</span></label>
+                      <input type="text" name="snils" placeholder="___-___-___-__" id="registration-snils" aria-label="Поле для ввода снилс" required>
                     </div>
                     <div class="form__group">
-                      <label for="registration-birth-date">Дата рождения *</label>
+                      <label for="registration-birth-date">Дата рождения <span>*</span></label>
                       <input type="text" name="birth-date" placeholder="__.__.____" id="registration-birth-date" aria-label="Поле для даты рождения" required>
                     </div>
                   </div>
                   <div class="form__group">
                     <div class="form__group-item">
                       <input class="visually-hidden" type="checkbox" name="personal-data" id="registration-personal-data" checked>
-                      <label for="registration-personal-data">Согласен на обработку моих персональных данных *</label>
+                      <label for="registration-personal-data">Согласен на обработку моих персональных данных <span>*</span></label>
                     </div>
                     <div class="form__group-item">
                       <input class="visually-hidden" type="checkbox" name="notification" id="registration-notification" checked>
-                      <label for="registration-notification">Согласен на получение уведомлений и рассылок *</label>
+                      <label for="registration-notification">Согласен на получение уведомлений и рассылок <span>*</span></label>
                     </div>
                   </div>
                   <div class="form__group form__group-bt">
@@ -118,6 +118,7 @@
           </div>
         </div>
       </main>
+      <script src="https://unpkg.com/imask"></script>
       <script src="js/script.js"></script>
     </body>
 </html>

@@ -53,5 +53,6 @@
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/scss/**/*.{sass,scss}"
-  ]
+  ],
+  "dependencies": {}
 }

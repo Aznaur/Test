@@ -12,7 +12,6 @@
     &:first-of-type {
       margin-right: 15px;
     }
-
   }
 }
 
@@ -48,7 +47,6 @@
     top: 14px;
     right: 0;
     z-index: 2;
-    display: block;
     width: 70px;
     height: 44px;
     background-color: transparent;
@@ -57,7 +55,7 @@
     transition: background-color 0.15s ease-in-out;
 
     &:hover {
-      background-color: #1740AA;
+      background-color: #1740aa;
     }
   }
 
