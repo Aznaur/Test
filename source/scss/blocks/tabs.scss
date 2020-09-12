@@ -7,12 +7,13 @@
   padding-left: 76px;
   padding-right: 76px;
   box-sizing: border-box;
+  transition: width 0.15s ease-in-out;
 
   &::before {
     content: "";
     position: absolute;
-    width: calc(100% - 18px);
-    left: 9px;
+    width: calc(100% - 30px);
+    left: 15px;
     border-radius: 4px;
     height: 100%;
     top: -21px;
@@ -23,8 +24,8 @@
   &::after {
     content: "";
     position: absolute;
-    width: calc(100% - 38px);
-    left: 18px;
+    width: calc(100% - 60px);
+    left: 30px;
     border-radius: 4px;
     height: 100%;
     top: -38px;
@@ -50,6 +51,7 @@
 
 .tabs__control {
   text-align: center;
+  margin-bottom: 40px;
 
   & label {
     font-size: 26px;
@@ -62,4 +64,10 @@
       margin-right: 20px;
     }
   }
+}
+
+.tabs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
