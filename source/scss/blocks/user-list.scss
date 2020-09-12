@@ -1,0 +1,59 @@
+.user-list__login {
+  display: flex;
+  width: 175px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: #1740AA;
+  }
+}
+
+.user-list__login-image {
+  width: 26px;
+  height: 25px;
+  margin-right: 9px;
+}
+
+@media (max-width: $table-width) {
+  .user-list__login {
+    font-size: 0;
+    width: auto;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+
+    &-image {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .user-list__login {
+    font-size: 14px;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-start;
+    opacity: 0.6;
+    transition: opacity 0.15s ease-in-out;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    &-image {
+      margin-right: 9px;
+    }
+  }
+}
