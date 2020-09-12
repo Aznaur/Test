@@ -17,6 +17,8 @@ const sprite = require('gulp-svgstore');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const del = require('del');
+const ghPages = require('gh-pages');
+const path = require('path');
 
 
 
